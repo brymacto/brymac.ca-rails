@@ -1,1 +1,8 @@
 <h1>Posts</h1>
+
+<% @posts.each do |post| %>
+<article class="preview">
+  <h5><%= link_to post.title, post %></h5>
+  <div class="date">post.created_at</div>
+</article>
+<% end %>
