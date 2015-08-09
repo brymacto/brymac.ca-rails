@@ -15,9 +15,10 @@ header.navigation {
   $navigation-padding: 1em;
   $navigation-background: $c_bg;
   // $navigation-background: $dark-gray;
-  $navigation-color: $c_red;
+  $navigation-color: $c_blue_2;
   // $navigation-color: transparentize(white, 0.3);
-  $navigation-color-hover: $dark-gray;
+  $navigation-color-hover: $c_blue;
+  // $navigation-color-hover: $dark-gray;
   // $navigation-color-hover: white;
   $navigation-height: 60px;
   $navigation-nav-button-background: $base-accent-color;
@@ -140,9 +141,10 @@ header.navigation {
     }
 
     a {
+      // text-transform: uppercase;
+      // font-weight: bold;
       color: $navigation-color;
       display: inline-block;
-      font-weight: 400;
 
       @include media ($horizontal-bar-mode) {
         padding-right: 1em;
