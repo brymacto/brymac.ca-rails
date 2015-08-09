@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
   def edit
     @post = Post.friendly.find(params[:id])
@@ -44,6 +44,6 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :contents, :public_date)
+      params.require(:post).permit(:title, :contents, :public_date, :tag_list)
     end
 end

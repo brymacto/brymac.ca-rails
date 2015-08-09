@@ -61,8 +61,12 @@ header.navigation {
   // Mobile view
 
   .navigation-menu-button {
-    background-color: $navigation-color;
-    color: $c_bg;
+    
+
+box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2);
+
+    border: 1px solid $navigation-color;
+    color: $navigation-color;
     display: block;
     float: left;
     font-weight: 700;
@@ -75,7 +79,22 @@ header.navigation {
     padding-bottom: 0em;
     // padding: 0.5em;
     margin-bottom: 0rem;
-    text-transform: uppercase;
+    text-transform: uppercase;    
+    // background-color: $navigation-color;
+    // color: $c_bg;
+    // display: block;
+    // float: left;
+    // font-weight: 700;
+    // line-height: $navigation-height / 1.5;
+    // margin: 0;
+    // margin-top: 0.5em;
+    // padding-right: 0.5em;
+    // padding-left: 0.5em;
+    // padding-top: 0em;
+    // padding-bottom: 0em;
+    // // padding: 0.5em;
+    // margin-bottom: 0rem;
+    // text-transform: uppercase;
 
     @include media ($horizontal-bar-mode) {
       display: none;

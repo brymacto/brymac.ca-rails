@@ -3,9 +3,13 @@
 <%= link_to post.title, post  %></h3>
 
 <div class="postCard-date post-date"><%= post.date %></div> 
-<p class="postCard-snippet">
+<% post.tag_list.each do |tag| %>
+<span class="badge"><%= tag %></span>
+
+<% end %>
+<div class="postCard-snippet">
   <%= truncate_html(post.contents, length: 300) %> 
   <span class="postCard-link"><%= link_to 'More', post_path(post) %></span>
-</p>
+</div>
 
 </article>
