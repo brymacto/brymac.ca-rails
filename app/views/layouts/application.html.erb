@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BrymacCaRails</title>
+  <title>Bryan MacDiarmid | Web Developer</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
-<%= yield %>
+<div class="wrapper">
+<header>
+  <h1 class="logo">Bryan MacDiarmid</h1>
+</header>
+
+  <div class="main">
+    <%= yield %>
+  </div>
+  <aside class="aside">
+    Aside content
+  </aside>
+</div>
 
 </body>
 </html>

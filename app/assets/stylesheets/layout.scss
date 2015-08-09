@@ -1,0 +1,32 @@
+.wrapper {
+  padding: 1rem;
+  @include outer-container;
+    header { @include span-columns(12);}
+    .main { @include span-columns(12); }
+    .aside { @include span-columns(12); }
+}
+
+@media screen and (min-width: $medium-screen) {
+    .wrapper {
+    header { @include span-columns(12);}
+    .main { @include span-columns(8); }
+    .aside { @include span-columns(4); } 
+  }
+  }
+
+
+body {
+  background-color: $c_bg;
+  font-family: $f_sans;
+}
+
+
+h1 {
+  color: $c_red;
+  font-family: $f_source;
+  &.logo {
+    font-weight: 100;
+    font-size: 5em;
+  }
+}
+
