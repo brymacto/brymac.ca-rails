@@ -1,0 +1,8 @@
+<h2 class="postCard-header">
+<%= link_to post.title, post  %></h2>
+
+<div><%= post.public_date %></div> 
+<p>
+  <%= truncate(post.contents, length: 300) %>
+</p>
+<%= link_to 'More', post_path(post) %> 

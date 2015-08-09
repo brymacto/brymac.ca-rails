@@ -1,10 +1,7 @@
 <h1>Posts</h1>
 
 <% @posts.each do |post| %>
-<article class="preview">
-  <h5><%= link_to post.title, post %></h5>
-  <div class="date"><%= post.public_date %></div>
-</article>
+<%= render post %>
 <% end %>
-
+<%= link_to 'All posts', posts_path %>
 <%= link_to 'New post', new_post_path %>
