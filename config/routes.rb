@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'tags/show'
+  get 'tags/:tag', to: 'tags#show'
+
   get 'projects/create'
 
   get 'projects/new'
