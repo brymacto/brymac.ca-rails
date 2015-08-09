@@ -12,16 +12,7 @@ body {
   .aside { @include span-columns(12); }
 }
 
-@media screen and (min-width: $medium-screen) {
-  .wrapper {
-    header { @include span-columns(12);}
-    .main { @include span-columns(8); }
-    .aside { @include span-columns(4); } 
-  }
-  h1 {
-    font-size: 5rem;
-  }
-}
+
 
 
 nav
@@ -59,3 +50,15 @@ h2 {
   margin-bottom:0.5em;
 }
 
+
+
+@media screen and (min-width: $medium-screen) {
+  .wrapper {
+    header { @include span-columns(12);}
+    .main { @include span-columns(8); }
+    .aside { @include span-columns(4); } 
+  }
+  h1.logo {
+    font-size: 4rem;
+  }
+}

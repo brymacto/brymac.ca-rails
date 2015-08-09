@@ -4,9 +4,15 @@ $(document).ready(function() {
 
   menuToggle.on('click', function(e) {
     e.preventDefault();
+       if($('#js-navigation-menu').is(':hidden')) {
+        $('#menu-icon').html('<i class="fa fa-caret-up"></i>');
+      } else {
+        $('#menu-icon').html('<i class="fa fa-caret-down"></i>');
+      }
     $('#js-navigation-menu').slideToggle(function(){
       if($('#js-navigation-menu').is(':hidden')) {
-        $('#js-navigation-menu').removeAttr('style');
+        $('#menu-icon').html('<i class="fa fa-caret-down"></i>');
+        // $('#js-navigation-menu').removeAttr('style');
       }
     });
   });
