@@ -7,21 +7,35 @@ body {
 .wrapper {
   padding: 1rem;
   @include outer-container;
-    header { @include span-columns(12);}
-    .main { @include span-columns(12); }
-    .aside { @include span-columns(12); }
+  header { @include span-columns(12);}
+  .main { @include span-columns(12); }
+  .aside { @include span-columns(12); }
 }
 
 @media screen and (min-width: $medium-screen) {
-    .wrapper {
+  .wrapper {
     header { @include span-columns(12);}
     .main { @include span-columns(8); }
     .aside { @include span-columns(4); } 
   }
+  h1 {
+    font-size: 5rem;
   }
+}
 
 
-
+nav
+{ 
+float: right;
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+    li {
+    display: inline;
+    }
+  }
+}
 
 
 h1 {
@@ -29,7 +43,8 @@ h1 {
   font-family: $f_source;
   &.logo {
     font-weight: 100;
-    font-size: 5em;
+    font-size: 3rem;
+    margin-bottom: 0rem;
   }
 }
 
