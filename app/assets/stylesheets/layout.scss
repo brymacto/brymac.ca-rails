@@ -28,14 +28,33 @@ float: right;
   }
 }
 
+.portrait {
+  width:100px;
+  height:100px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 50px;
+
+  // float: right;
+  // width: 150px;
+  // height: 150px;
+  // border-radius: 75px;
+  // margin-left: 1em;
+  // position: relative;
+  // top: -40px;
+
+  
+}
+
 
 h1 {
   color: $c_red;
   font-family: $f_source;
   &.logo {
     font-weight: 100;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0rem;
+    text-align: center;
   }
 }
 
@@ -65,5 +84,14 @@ h2 {
   }
   h1.logo {
     font-size: 4rem;
+    text-align: left;
+  }
+  .portrait {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    display: inline;
+    float: right;
+    margin: 0;
   }
 }
