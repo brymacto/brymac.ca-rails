@@ -1,3 +1,23 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-header {
+  margin-bottom: 0.25rem;
+}
+
+.postCard {
+  border-bottom: 1px solid darken($c_bg, 10);
+  margin-bottom: 1rem;
+}
+
+.post-date {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.postCard-snippet {
+  font-size: 0.9em;
+  margin-left: 0.5rem;
+}

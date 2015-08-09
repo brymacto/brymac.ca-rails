@@ -1,8 +1,14 @@
-<h2><%= @post.title %></h2>
-
-<div><%= @post.public_date %></div> 
-<p>
-  <%= @post.contents %>
-</p>
 <%= link_to 'Edit', edit_post_path(@post) %> 
 <%= link_to 'All posts', posts_path %>
+
+
+<article class="post">
+<h3 class="postCard-header post-header">
+<%= link_to @post.title, @post  %></h3>
+
+<div class="postCard-date post-date"><%= @post.date %></div> 
+<p class="postCard-snippet">
+  <%= @post.contents %> 
+</p>
+
+</article>

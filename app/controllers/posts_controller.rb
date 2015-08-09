@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+
+
   def index
     @posts = Post.all
   end
@@ -14,7 +16,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      if (@post.public_date = nil)
+      if (@post.public_date == nil)
         @post.public_date = @post.created_at.to_date
         @post.save
       end
@@ -37,6 +39,9 @@ class PostsController < ApplicationController
  
     redirect_to posts_path
   end
+
+
+
   private
     def post_params
       params.require(:post).permit(:title, :contents, :public_date)

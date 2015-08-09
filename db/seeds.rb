@@ -10,7 +10,8 @@
 10.times do 
 Post.create(
     title: Faker::Lorem.sentence,
-    contents: Faker::Lorem.paragraphs(15).join
+    contents: Faker::Lorem.paragraphs(15).join,
+    public_date: Faker::Time.between(1.year.ago, Time.now, :all).to_date
 
   )
 
