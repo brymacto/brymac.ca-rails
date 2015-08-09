@@ -3,6 +3,8 @@
 <% @posts.each do |post| %>
 <article class="preview">
   <h5><%= link_to post.title, post %></h5>
-  <div class="date">post.created_at</div>
+  <div class="date"><%= post.public_date %></div>
 </article>
 <% end %>
+
+<%= link_to 'New post', new_post_path %>
