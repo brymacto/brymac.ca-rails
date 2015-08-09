@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'projects/create'
+
+  get 'projects/new'
+
+  get 'projects/edit'
+
+  get 'projects/update'
+
+  get 'projects/destroy'
+
+  get 'projects/index'
+
   get 'static_pages/index'
   root 'static_pages#index'
 
