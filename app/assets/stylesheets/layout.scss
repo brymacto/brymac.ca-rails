@@ -1,3 +1,9 @@
+body {
+  background-color: $c_bg;
+  font-family: $f_sans;
+  padding-top: 1em;
+}
+
 .wrapper {
   padding: 1rem;
   @include outer-container;
@@ -15,10 +21,7 @@
   }
 
 
-body {
-  background-color: $c_bg;
-  font-family: $f_sans;
-}
+
 
 
 h1 {
