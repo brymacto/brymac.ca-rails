@@ -1,1 +1,10 @@
-_detail.html.erb
+<article class="post postDetail">
+<h3 class="postDetail-header post-header">
+<%= link_to @post.title, @post  %></h3>
+
+<div class="postDetail-date post-date"><%= @post.date %></div> 
+<p class="postDetail-contents">
+  <%= @post.contents %> 
+</p>
+
+</article>

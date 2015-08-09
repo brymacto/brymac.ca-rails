@@ -2,13 +2,4 @@
 <%= link_to 'All posts', posts_path %>
 
 
-<article class="post">
-<h3 class="postCard-header post-header">
-<%= link_to @post.title, @post  %></h3>
-
-<div class="postCard-date post-date"><%= @post.date %></div> 
-<p class="postCard-snippet">
-  <%= @post.contents %> 
-</p>
-
-</article>
+<%= render 'detail' %>
