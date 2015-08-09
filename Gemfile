@@ -26,6 +26,8 @@ gem 'bourbon'
 gem 'neat'
 gem 'refills'
 gem 'friendly_id', '~> 5.1.0' 
+gem 'rails-html-sanitizer'
+gem 'truncate_html'
 
 
 

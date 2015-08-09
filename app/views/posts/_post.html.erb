@@ -4,7 +4,7 @@
 
 <div class="postCard-date post-date"><%= post.date %></div> 
 <p class="postCard-snippet">
-  <%= truncate(post.contents, length: 300) %> 
+  <%= truncate_html(post.contents, length: 300) %> 
   <span class="postCard-link"><%= link_to 'More', post_path(post) %></span>
 </p>
 

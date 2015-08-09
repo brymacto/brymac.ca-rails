@@ -4,7 +4,7 @@
 
 <div class="postDetail-date post-date"><%= @post.date %></div> 
 <p class="postDetail-contents">
-  <%= @post.contents %> 
+  <%= @post.contents.html_safe %> 
 </p>
 
 </article>
