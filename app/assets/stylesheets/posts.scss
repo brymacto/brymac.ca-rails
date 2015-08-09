@@ -9,6 +9,10 @@
 .postCard {
   border-bottom: 1px solid darken($c_bg, 10);
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+.postCard-link {
+  font-size: 0.75em;
 }
 
 .post-meta {
@@ -18,14 +22,36 @@
 
 .post-date {
   text-transform: uppercase;
-  margin-right: 1em;
+  margin-right: 0.5em;
 }
 
 .postCard-snippet {
-  font-size: 0.9em;
-  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  * {
+    
+      margin: 0px; // html truncater adds p tags, in these cases margin should be zero.
+    
+  }
+}
+
+.tag_list {
+  display: block;
+  line-height: 1.75;
 }
 
 .postDetail-header {
   font-size: 2em;
+}
+
+.blogPreview {
+  .postCard {
+    border-bottom-width: 0;
+  }
+}
+
+@media screen and (min-width: $medium-screen) {
+.tag_list {
+  display: inline;
+  line-height: 1.75;
+}
 }

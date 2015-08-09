@@ -20,6 +20,11 @@
     <%= f.text_area :contents %>
   </p>
 
+  <div class="field">
+    <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+    <%= f.text_field :tag_list, value: @post.tag_list.to_s %>
+  </div>
+
 <p>
  <%= f.label 'Public date' %><br>
  <%= date_select :post, :public_date %>

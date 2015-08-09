@@ -1,5 +1,9 @@
-<h1>Tags#show</h1>
-<p>Find me in app/views/tags/show.html.erb</p>
+<h1>Tag: <%= params[:tag] %></h1>
+<% if @posts.length == 0 %>
+No content found for tag '<%= params[:tag] %>'.  
+  
+<% end %>
+
 <% @posts.each do |post| %>
 <%= render post %>
 <% end %>

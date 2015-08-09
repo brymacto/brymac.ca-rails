@@ -1,8 +1,10 @@
 <p>I'm a Toronto-based web developer, with a focus on Ruby, Rails, and JavaScript.  In August, 2015, I completed the <a href="https://bitmakerlabs.com/" target="_blank">Bitmaker Labs</a> web development program.</p>
 
-<h2>Blog</h2>
-<% @posts.each do |post| %>
-<%= render post %>
-<% end %>
+<h2><%= link_to 'Blog', posts_path  %></h2>
+<div class="blogPreview">
+  <% @posts.each do |post| %>
+  <%= render post %>
+  <% end %>
+</div>
 
 <h2>Projects</h2>

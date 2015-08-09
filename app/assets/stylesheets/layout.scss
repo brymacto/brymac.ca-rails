@@ -72,8 +72,19 @@ h2 {
     color: $c_blue_2;
     padding: 0.5rem 0;
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: transparentize(white, 0.3);
+
+    }
+  }
 }
 
+h3 {
+  
+}
 
 
 @media screen and (min-width: $medium-screen) {

@@ -29,6 +29,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'rails-html-sanitizer'
 gem 'truncate_html'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'font-awesome-sass', '~> 4.3.0'
 
 
 
