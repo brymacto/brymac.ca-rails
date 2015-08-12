@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def create
-    @project = Project.new(Project_params)
+    @project = Project.new(project_params)
     if @project.save
       if (@project.public_date == nil)
         @project.public_date = @project.created_at.to_date
@@ -20,9 +20,13 @@ class ProjectsController < ApplicationController
     @project = Project.friendly.find(params[:id])
   end
 
+  def show
+    @project = Project.friendly.find(params[:id])
+  end
+
   def update
     @project = Project.friendly.find(params[:id])
-    if @project.update(Project_params)
+    if @project.update(project_params)
       redirect_to @project
     else
       render 'edit'
