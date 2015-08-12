@@ -1,8 +1,8 @@
-<article class="project projectDetail">
-  <h3 class="projectDetail-header project-header">
+<article class="project postDetail">
+  <h3 class="postDetail-header post-header">
     <%= link_to @project.title, @project  %></h3>
-    <div class="projectDetail-meta project-meta">
-      <span class="projectDetail-date project-date"><%= @project.public_date %></span>
+    <div class="postDetail-meta post-meta">
+      <span class="postDetail-date post-date"><%= @project.public_date %></span>
       <div class="tag_list">
         <% @project.tag_list.each do |tag| %>
         <%= link_to tag, ('/tags/' + tag.downcase), class: :badge  %>
@@ -13,7 +13,7 @@
         <%= image_tag(@project.photo.full, class: 'full') %>
         <div class="caption"><%= @project.photo_caption %></div>
       <% end %>
-    <p class="projectDetail-contents">
+    <p class="postDetail-contents">
       <%= @project.description.html_safe %> 
     </p>
   </article>
