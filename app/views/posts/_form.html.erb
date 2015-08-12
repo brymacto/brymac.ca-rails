@@ -9,21 +9,26 @@
   <% end %>
 
 
-<%= form_for @post do |f| %>
-  <p>
+<%= form_for @post, html: { multipart: true } do |f| %>
+  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
-  </p>
+  </div>
  
-  <p>
+  <div class="field">
     <%= f.label :contents %><br>
     <%= f.text_area :contents %>
-  </p>
+  </div>
 
   <div class="field">
     <%= f.label :tag_list, "Tags (separated by commas)" %><br />
     <%= f.text_field :tag_list, value: @post.tag_list.to_s %>
   </div>
+
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+</div>
 
 <p>
  <%= f.label 'Public date' %><br>

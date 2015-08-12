@@ -2,13 +2,16 @@
   <h3 class="postDetail-header post-header">
     <%= link_to @post.title, @post  %></h3>
     <div class="postDetail-meta post-meta">
-    <span class="postDetail-date post-date"><%= @post.date %></span>
+      <span class="postDetail-date post-date"><%= @post.date %></span>
       <div class="tag_list">
         <% @post.tag_list.each do |tag| %>
         <%= link_to tag, ('/tags/' + tag.downcase), class: :badge  %>
         <% end %>
       </div>
     </div> 
+      <% if @post.photo %>
+        <%= image_tag(@post.photo.full, class: 'full') %>
+      <% end %>
     <p class="postDetail-contents">
       <%= @post.contents.html_safe %> 
     </p>

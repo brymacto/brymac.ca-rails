@@ -3,16 +3,21 @@
     <%= link_to post.title, post  %></h3>
 
     <div class="postCard-meta post-meta">
-    <span class="postCard-date post-date"><%= post.date %></span>
-    <div class="tag_list">
-      <% post.tag_list.each do |tag| %>
-      <%= link_to tag, ('/tags/' + tag.downcase), class: :badge  %>
-      <% end %>
-    </div>
+      <span class="postCard-date post-date"><%= post.date %></span>
+      <div class="tag_list">
+        <% post.tag_list.each do |tag| %>
+        <%= link_to tag, ('/tags/' + tag.downcase), class: :badge  %>
+        <% end %>
+      </div>
     </div> 
 
+      <% if post.photo %>
+        <%= image_tag(post.photo.thumb, class: 'thumb') %>
+      <% end %>    
     <div class="postCard-snippet">
       <%= truncate_html(post.contents, length: 300, omission: '...') %> 
     </div>
+
+
 
   </article>
