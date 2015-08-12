@@ -1,51 +1,56 @@
  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-        <% @post.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+ <div id="error_explanation">
+  <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
 
 <%= form_for @post, html: { multipart: true } do |f| %>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
- 
-  <div class="field">
-    <%= f.label :contents %><br>
-    <%= f.text_area :contents %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tag_list, "Tags (separated by commas)" %><br />
-    <%= f.text_field :tag_list, value: @post.tag_list.to_s %>
-  </div>
-
-<% if @post.photo %>
-        <%= image_tag(@post.photo.thumb, class: 'thumb') %>
-      <% end %>
-
-  <div class="field">
-    <%= f.label :photo %><br />
-    <%= f.file_field :photo %>
+<div class="field">
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
 </div>
 
-  <p>
-    <label>
-      <%= f.check_box :remove_photo %>
-      Remove photo
-    </label>
-  </p>
+<div class="field">
+  <%= f.label :contents %><br>
+  <%= f.text_area :contents %>
+</div>
+
+<div class="field">
+  <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+  <%= f.text_field :tag_list, value: @post.tag_list.to_s %>
+</div>
+
+<% if @post.photo %>
+  <%= image_tag(@post.photo.thumb, class: 'thumb') %>
+<% end %>
+
+<div class="field">
+  <%= f.label :photo %><br />
+  <%= f.file_field :photo %>
+</div>
+
+<div class="field">
+  <%= f.label :photo_caption %><br>
+  <%= f.text_field :photo_caption %>
+</div>
+
+<p>
+  <label>
+    <%= f.check_box :remove_photo %>
+    Remove photo
+  </label>
+</p>
 
 <p>
  <%= f.label 'Public date' %><br>
  <%= date_select :post, :public_date %>
- </p>
-  <p>
-    <%= f.submit %>
-  </p>
+</p>
+<p>
+  <%= f.submit %>
+</p>
 <% end %>

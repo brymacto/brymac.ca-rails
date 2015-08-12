@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812002231) do
+ActiveRecord::Schema.define(version: 20150812005803) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -29,11 +29,12 @@ ActiveRecord::Schema.define(version: 20150812002231) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "contents"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.date     "public_date"
     t.string   "slug"
     t.string   "photo"
+    t.string   "photo_caption"
   end
 
   add_index "posts", ["title"], name: "index_posts_on_title", unique: true
@@ -44,9 +45,10 @@ ActiveRecord::Schema.define(version: 20150812002231) do
     t.string   "code_url"
     t.string   "live_url"
     t.date     "public_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "photo"
+    t.string   "photo_caption"
   end
 
   create_table "taggings", force: :cascade do |t|

@@ -11,6 +11,7 @@
     </div> 
       <% if @post.photo.url %>
         <%= image_tag(@post.photo.full, class: 'full') %>
+        <div class="caption"><%= @post.photo_caption %></div>
       <% end %>
     <p class="postDetail-contents">
       <%= @post.contents.html_safe %> 
