@@ -1,7 +1,6 @@
 <article class="postCard">
   <h3 class="postCard-header post-header">
     <%= link_to post.title, post  %></h3>
-
     <div class="postCard-meta post-meta">
       <span class="postCard-date post-date"><%= post.date %></span>
       <div class="tag_list">
@@ -14,6 +13,7 @@
       <% if post.photo.url %>
         <%= image_tag(post.photo.thumb, class: 'thumb') %>
       <% end %>    
+
     <div class="postCard-snippet">
       <%= truncate_html(post.contents, length: 300, omission: '...') %> 
     </div>
