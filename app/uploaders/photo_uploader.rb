@@ -13,7 +13,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :full do
-    process resize_to_fit: [550,600]
+    process resize_to_fit: [800,800]
   end
 
   # version :thumb_xs do

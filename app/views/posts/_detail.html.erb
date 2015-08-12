@@ -9,7 +9,7 @@
         <% end %>
       </div>
     </div> 
-      <% if @post.photo %>
+      <% if @post.photo.url %>
         <%= image_tag(@post.photo.full, class: 'full') %>
       <% end %>
     <p class="postDetail-contents">

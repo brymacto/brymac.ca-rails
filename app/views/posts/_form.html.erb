@@ -25,10 +25,21 @@
     <%= f.text_field :tag_list, value: @post.tag_list.to_s %>
   </div>
 
+<% if @post.photo %>
+        <%= image_tag(@post.photo.thumb, class: 'thumb') %>
+      <% end %>
+
   <div class="field">
     <%= f.label :photo %><br />
     <%= f.file_field :photo %>
 </div>
+
+  <p>
+    <label>
+      <%= f.check_box :remove_photo %>
+      Remove photo
+    </label>
+  </p>
 
 <p>
  <%= f.label 'Public date' %><br>
