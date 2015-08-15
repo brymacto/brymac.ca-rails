@@ -1,11 +1,11 @@
-<h1>Tag: <%= params[:tag] %></h1>
+<h1>Tag: <%= @tag_name %></h1>
 
 <ul class="accordion-tabs data-no-turbolink">
   <li class="tab-header-and-content">
     <a href="javascript:void(0)" class="is-active tab-link">Blog Posts</a>
     <div class="tab-content">
      <% if @posts.length == 0 %>
-     Sorry, I haven't tagged any blog posts with '<%= params[:tag] %>' yet. Check out my <%= link_to 'blog', posts_path %> for more posts.   
+     Sorry, I haven't tagged any blog posts with '<%= @tag_name %>' yet. Check out my <%= link_to 'blog', posts_path %> for more posts.   
      <% end %>
      <% @posts.each do |post| %>
      <%= render post %>
@@ -16,7 +16,7 @@
   <a href="javascript:void(0)" class="tab-link">Projects</a>
   <div class="tab-content">
      <% if @projects.length == 0 %>
-     Sorry, I haven't tagged any projects with '<%= params[:tag] %>' yet. Check out my <%= link_to 'projects', projects_path %> to see what else I've worked on.   
+     Sorry, I haven't tagged any projects with '<%= @tag_name %>' yet. Check out my <%= link_to 'projects', projects_path %> to see what else I've worked on.   
      <% end %>
      <% @projects.each do |project| %>
      <%= render project %>

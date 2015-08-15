@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'tags/show'
+  get 'tags', to: 'tags#show'
   get 'tags/:tag', to: 'tags#show', as: :tag
 
   get 'projects/create'
