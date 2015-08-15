@@ -53,9 +53,12 @@
   }
 
   .tab-link {
+      font-family: $f_sans;
+    text-transform: uppercase;
+    color:$c_red;
+    font-weight:bold;
     background-color: $c_bg;
     border-top: $tab-border;
-    color: $dark-gray;
     display: block;
     font-weight: bold;
     padding: $base-spacing/2 $gutter/2;

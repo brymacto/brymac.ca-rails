@@ -1,10 +1,12 @@
 class TagsController < ApplicationController
   def show
     tags = params[:tags]
+    @pluralized = ''
     if tags
       @posts = Post.tagged_with(params[:tags], :any => true)
       @projects = Project.tagged_with(params[:tags], :any => true)
       @tag_name = params[:tags].join(', ')
+      @pluralized = 's' if (tags.count > 1)
     else
       @posts = Post.tagged_with(params[:tag])
       @projects = Project.tagged_with(params[:tag])
