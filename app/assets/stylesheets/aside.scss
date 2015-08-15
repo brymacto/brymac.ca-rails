@@ -14,20 +14,20 @@ aside {
     margin-bottom: 1em;
   }
 
-  a.icon, a.skill {
+  .contact_method {
     display: block;
     i {
       margin-right: 1em;
     }
   }
-
-
-}
 .rating {
-  font-size: 1em;
   font-weight: bold;
   color: $c_red;
   vertical-align: middle;
   float: right;
-  // line-height: 18px;
+  i {
+    margin-left: 0.25em;
+  }
+}
+
 }

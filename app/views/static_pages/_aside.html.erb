@@ -2,17 +2,29 @@
 
       <h3>Skills</h3>
       <section>
-      <%= link_to 'Rails', tag_path(:rails), class: :skill  %> <span class="rating"><i class="fa fa-circle"></i></span>
-        <%= link_to 'Ruby', tag_path(:ruby), class: :skill  %>
-        <%= link_to 'JavaScript', tag_path(:javascript), class: :skill  %>
-        <%= link_to 'HTML & CSS', tag_path(:html), class: :skill  %>
+        <div class="skill">
+        <%= link_to 'Rails', tag_path(:rails)  %>
+        <%= skills_bullets(3) %>
+        </div>
+        <div class="skill">
+        <%= link_to 'Ruby', tag_path(:ruby)  %>
+        <%= skills_bullets(3) %>
+        </div>
+        <div class="skill">
+        <%= link_to 'JavaScript', tag_path(:javascript)  %>
+        <%= skills_bullets(3) %>
+        </div>
+        <div class="skill">
+        <%= link_to 'HTML & CSS', tag_path(:html)  %>
+        <%= skills_bullets(4) %>
+        </div>
       </section>
       <h3>Contact</h3>
       <section>
-        <a href="mailto:brymac@gmail.com" class="icon"><i class="fa fa-envelope-o"></i>brymac@gmail.com</a>
-        <a href="http://twitter.com/bmacdia" target="_blank" class="icon"><i class="fa fa-twitter"></i>@bmacdia</a>
-        <a href="https://github.com/brymacto" target="_blank" class="icon"><i class="fa fa-github"></i>/brymacto</a>
-        <a href="https://ca.linkedin.com/in/brymac" target="_blank" class="icon"><i class="fa fa-linkedin"></i>/brymac</a>
+        <a href="mailto:brymac@gmail.com" class="contact_method"><i class="fa fa-envelope-o"></i>brymac@gmail.com</a>
+        <a href="http://twitter.com/bmacdia" target="_blank" class="contact_method"><i class="fa fa-twitter"></i>@bmacdia</a>
+        <a href="https://github.com/brymacto" target="_blank" class="contact_method"><i class="fa fa-github"></i>/brymacto</a>
+        <a href="https://ca.linkedin.com/in/brymac" target="_blank" class="contact_method"><i class="fa fa-linkedin"></i>/brymac</a>
       </section>
 
 
