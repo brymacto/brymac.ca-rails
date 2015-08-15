@@ -1,3 +1,46 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.project {
+  .tag_list {
+    clear: both;
+    float: none;
+    display: block;
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+.project_links {
+  display: block;
+  padding: 0em 0em 1em 0em;
+
+  .project_link {
+    // font-size: 1.25rem;
+    background-color: $c_red;
+    color: #fff;
+    padding: 0.25em 0.5em;
+    &:hover {
+      background-color: $c_blue_2;
+      color: #fff;
+    }
+  }
+
+}
+
+
+
+@media screen and (min-width: $medium-screen) {
+  .project-meta {
+    float: left;
+  }
+.project_links {
+  float: right;
+  margin-bottom: 0em;
+  padding: 0em;
+}
+
+}
+@media screen and (min-width: $small-screen) {
+
+
+}
