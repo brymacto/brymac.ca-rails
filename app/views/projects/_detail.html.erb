@@ -8,10 +8,7 @@
     <span class="postDetail-date post-date"><%= @project.date %></span>
     <%= render 'shared/tags', taggable: @project %>
   </div> 
-  <div class="project_links">
-    <a href="<%= @project.code_url%>" class="project_link" target="_blank"><i class="fa fa-github"></i> Repo</a>
-    <a href="<%= @project.live_url%>" class="project_link" target="_blank"><i class="fa fa-external-link"></i> Live</a>
-  </div>  
+  <%= render 'links', project: @project %>
 
   
   <% if @project.photo.url %>

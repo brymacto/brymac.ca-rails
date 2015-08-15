@@ -15,15 +15,27 @@
   padding: 0em 0em 1em 0em;
 
   .project_link {
-    // font-size: 1.25rem;
-    background-color: $c_red;
-    color: #fff;
+    color: $c_red;
+    border: 1px solid $c_red;
     padding: 0.25em 0.5em;
     &:hover {
-      background-color: $c_blue_2;
-      color: #fff;
+      color: $c_blue_2;
     }
   }
 
 }
 
+
+.postCard {
+  .project_links {
+    font-size: 0.75rem;
+    margin-top: 1em;
+
+
+  .project_link {
+    &:hover {
+    }
+  }
+
+}
+}

@@ -1,0 +1,10 @@
+<% if project.code_url.length > 0 || project.live_url.length > 0 %>
+  <div class="project_links">
+    <% if project.code_url.length > 0 %>
+      <a href="<%= project.code_url%>" class="project_link" target="_blank"><i class="fa fa-github"></i> Repo</a>
+    <% end %>
+    <% if project.live_url.length > 0 %>
+    <a href="<%= project.live_url%>" class="project_link" target="_blank"><i class="fa fa-external-link"></i> Live</a>
+    <% end %>
+  </div>  
+<% end %>

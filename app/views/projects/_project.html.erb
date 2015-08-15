@@ -2,16 +2,17 @@
   <h3 class="postCard-header post-header">
     <%= link_to project.title, project  %></h3>
     <div class="postCard-meta post-meta">
-      <span class="postCard-date post-date"><%= project.public_date %></span>
+      <span class="postCard-date post-date"><%= project.date %></span>
       <%= render 'shared/tags', taggable: project %>
     </div> 
+      <%= render 'links', project: project %>
 
       <% if project.photo.url %>
         <%= image_tag(project.photo.thumb, class: 'thumb') %>
       <% end %>    
 
     <div class="postCard-snippet">
-      <%= truncate_html(project.description, length: 300, omission: '...') %> 
+      <%= truncate_html(project.description, length: 350, omission: '...') %> 
     </div>
 
 
