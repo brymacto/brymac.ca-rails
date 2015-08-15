@@ -5,8 +5,8 @@ $error-color: #fbe3e4 !default;
 $notice-color: #e5edf8 !default;
 $success-color: #e6efc2 !default;
 
-@mixin badge($color: $c_blue) {
-  background-color: $color;
+@mixin badge($color: $c_blue_2) {
+  background-color: lighten($dark_gray,50%);
   border-radius: $badge-font-size * 5;
   color: $c_white;
   // color: darken($color, 60%);
@@ -20,7 +20,7 @@ $success-color: #e6efc2 !default;
 .badge {
   @include badge;
   &:hover {
-    background-color: $c_blue_2;
+    background-color: $c_blue;
     color: #fff;
   }
 }
