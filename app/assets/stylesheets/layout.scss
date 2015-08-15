@@ -11,9 +11,8 @@ body {
   .main { @include span-columns(12); position: relative;}
   .aside { @include span-columns(12); }
   .featured_projects_wrapper {
-    @include span-columns(12 of 12);
+    // @include span-columns(12 of 12);
     .featured_project {
-      @include span-columns(12 of 12);
     }
   }
 }
@@ -23,13 +22,13 @@ body {
 
 nav
 { 
-float: right;
+  float: right;
   ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     li {
-    display: inline;
+      display: inline;
     }
   }
 }
@@ -39,17 +38,7 @@ float: right;
   height:100px;
   display: block;
   margin: 1rem auto;
-  border-radius: 50px;
-
-  // float: right;
-  // width: 150px;
-  // height: 150px;
-  // border-radius: 75px;
-  // margin-left: 1em;
-  // position: relative;
-  // top: -40px;
-
-  
+  border-radius: 50px;  
 }
 
 .caption {
@@ -123,11 +112,12 @@ h3 {
 }
 
 
+
 @media screen and (min-width: $medium-screen) {
   .wrapper {
     header { @include span-columns(12);}
-    .main { @include span-columns(8); }
-    .aside { @include span-columns(4); } 
+    .main { @include span-columns(9); }
+    .aside { @include span-columns(3); } 
   }
   h1.logo {
     font-size: 4rem;
@@ -141,5 +131,20 @@ h3 {
     display: inline;
     float: right;
     margin: 0;
+  }
+}
+
+@media screen and (min-width: $x-large-screen) {
+  .featured_projects_wrapper {
+    @include span-columns(9 of 9);
+    .featured_project {
+      @include span-columns(3 of 9);
+      .thumb {
+        display:block;
+        float: none;
+        margin: 1em auto;
+        margin-top: 1.5em;
+      }
+    }
   }
 }
