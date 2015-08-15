@@ -5,7 +5,7 @@
       <span class="postCard-date post-date"><%= project.date %></span>
       <%= render 'shared/tags', taggable: project %>
     </div> 
-      <%= render 'links', project: project %>
+      <%= render 'projects/links', project: project %>
 
       <% if project.photo.url %>
         <%= image_tag(project.photo.thumb, class: 'thumb') %>

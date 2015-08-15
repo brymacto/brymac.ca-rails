@@ -10,6 +10,12 @@ body {
   header { @include span-columns(12);}
   .main { @include span-columns(12); position: relative;}
   .aside { @include span-columns(12); }
+  .featured_projects_wrapper {
+    @include span-columns(12 of 12);
+    .featured_project {
+      @include span-columns(12 of 12);
+    }
+  }
 }
 
 
