@@ -8,7 +8,6 @@ body {
   padding: 1rem;
   @include outer-container;
   header { @include span-columns(12);}
-  footer { @include span-columns(12);}
   .main { @include span-columns(12); position: relative;}
   .aside { @include span-columns(12); }
   .featured_projects_wrapper {
@@ -18,7 +17,15 @@ body {
   }
 }
 
-
+footer {
+  text-align: right;
+  font-size: 0.75rem;
+  color: $medium-gray;
+  border-top: 1px dotted $light_gray;
+  padding-top: 1em;
+  margin-top: 1em;
+  clear: both;
+}
 
 
 nav
@@ -85,32 +92,7 @@ h2 {
 }
 
 
-// h2 {
-//   font-family: $f_sans;
-//   font-size:1.5em;
-//   background-color:$c_blue;
-//   color:$c_white;
-//   font-weight:400;
-//   padding: 0.5rem 0.75rem;
-//   margin-bottom:0.5em;
-//   &.postCard-header {
-//     background-color: inherit;
-//     color: $c_blue_2;
-//     padding: 0.5rem 0;
-//   }
-//   a {
-//     color: inherit;
-//     text-decoration: none;
-//     &:hover {
-//       color: transparentize(white, 0.3);
 
-//     }
-//   }
-// }
-
-h3 {
-
-}
 
 
 
@@ -118,7 +100,7 @@ h3 {
   .wrapper {
     header { @include span-columns(12);}
     .main { @include span-columns(9); }
-    .aside { @include span-columns(3); @include omega } 
+    .aside { @include span-columns(3); } 
   }
   h1.logo {
     font-size: 4rem;
