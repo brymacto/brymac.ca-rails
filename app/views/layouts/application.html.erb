@@ -12,26 +12,45 @@
 </head>
 <body>
 
-<div class="wrapper">
+  <div class="wrapper">
 
-<header>
-<%= image_tag("portrait.jpg", alt: "Bryan MacDiarmid portrait", class: "portrait") %>
-  <h1 class="logo">Bryan MacDiarmid</h1>
-<%= render 'refills/navigation' %>
-  
-</header>
+    <header>
+      <%= image_tag("portrait.jpg", alt: "Bryan MacDiarmid portrait", class: "portrait") %>
+      <h1 class="logo">Bryan MacDiarmid</h1>
+      <%= render 'refills/navigation' %>
 
-  <div class="main">
-    <%= yield %>
+    </header>
+
+    <div class="main">
+      <%= yield %>
+    </div>
+    <aside class="aside">
+
+      <h3>Skills</h3>
+      <section>
+        <%= link_to 'Rails', tag_path(:rails), class: :skill  %>
+        <%= link_to 'Ruby', tag_path(:ruby), class: :skill  %>
+        <%= link_to 'JavaScript', tag_path(:javascript), class: :skill  %>
+        <%= link_to 'HTML & CSS', tag_path(:html), class: :skill  %>
+<!-- 
+      <a href="" class="skill">Rails</a>
+        <a href="" class="skill">Ruby</a>
+        <a href="" class="skill">JavaScript</a>
+        <a href="" class="skill">HTML &amp; CSS</a> -->
+
+      </section>
+      <h3>Contact</h3>
+      <section>
+        <a href="mailto:brymac@gmail.com" class="icon"><i class="fa fa-envelope-o"></i>brymac@gmail.com</a>
+        <a href="http://twitter.com/bmacdia" target="_blank" class="icon"><i class="fa fa-twitter"></i>@bmacdia</a>
+        <a href="https://github.com/brymacto" target="_blank" class="icon"><i class="fa fa-github"></i>/brymacto</a>
+        <a href="https://ca.linkedin.com/in/brymac" target="_blank" class="icon"><i class="fa fa-linkedin"></i>/brymac</a>
+      </section>
+
+
+
+    </aside>
   </div>
-  <aside class="aside">
-    <h3>Skills</h3>
-    <h3>Contact</h3>
-
-
-
-  </aside>
-</div>
 
 </body>
 </html>

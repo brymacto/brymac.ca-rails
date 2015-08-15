@@ -1,0 +1,23 @@
+aside {
+  h3 {
+    background-color: $c_blue;
+    color: #fff;
+    padding: 0.5em;
+    font-family: $f_sans;
+    font-size:0.8rem;
+    text-transform: uppercase;
+  }
+
+  section {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  a.icon, a.skill {
+    display: block;
+    i {
+      margin-right: 1em;
+    }
+  }
+}
