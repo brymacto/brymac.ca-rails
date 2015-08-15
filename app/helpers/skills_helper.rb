@@ -1,25 +1,25 @@
 module SkillsHelper
   def skills_bullets(rating)
-    str = ''
-    num = rating.to_i
-    decimal = true if rating != num
-    blanks = 5 - num
-    blanks -= 1 if decimal
-    str << '<span class="rating">'
+    final_html = ''
+    rating_int = rating.to_i
+    has_decimal = true if rating != rating_int
+    blanks = 5 - rating_int
+    blanks -= 1 if has_decimal
+    final_html << '<span class="rating">'
 
-    num.times.each do
-      str << '<i class="fa fa-circle"></i>'
+    rating_int.times.each do
+      final_html << '<i class="fa fa-circle"></i>'
     end
 
-    str << '<i class="fa fa-adjust fa-rotate-180"></i>' if decimal
+    final_html << '<i class="fa fa-adjust fa-rotate-180"></i>' if has_decimal
 
     blanks.times.each do
-      str << '<i class="fa fa-circle-o"></i>'
+      final_html << '<i class="fa fa-circle-o"></i>'
     end
 
-    str << '</span>'
+    final_html << '</span>'
 
-    str.html_safe
+    final_html.html_safe
 
   end
 end
