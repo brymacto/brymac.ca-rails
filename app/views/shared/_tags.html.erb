@@ -1,5 +1,16 @@
+<% short_list ||= false %>
+<% additional_tags = taggable.tag_list.count - 3 %>
+<% if short_list 
+list = taggable.tag_list.first(3)
+else 
+list = taggable.tag_list
+end %>
+
 <div class="tag_list">
-  <% taggable.tag_list.each do |tag| %>
-    <%= link_to tag, ('/tags/' + tag.downcase), class: :badge  %>
+  <% list.each do |tag| %>
+    <%= link_to tag, tag_path(tag), class: :badge  %>
+  <% end %>
+  <% if short_list && additional_tags > 0 %>
+    <%= link_to ('+' + additional_tags.to_s + ' <i class="fa fa-tag"></i>').html_safe, taggable, class: :badge  %>
   <% end %>
 </div>

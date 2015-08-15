@@ -139,6 +139,9 @@ h3 {
     @include span-columns(9 of 9);
     .featured_project {
       @include span-columns(3 of 9);
+      .tag_list {
+        display: block;
+      }
       .thumb {
         display:block;
         float: none;
