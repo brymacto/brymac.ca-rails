@@ -40,12 +40,12 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all.order(created_at: :desc)
+    @projects = Project.all.order(public_date: :desc)
   end
 
   private
 
     def project_params
-      params.require(:project).permit(:title, :description, :code_url, :live_url, :public_date, :tag_list, :photo, :remove_photo, :photo_caption)
+      params.require(:project).permit(:title, :description, :code_url, :live_url, :public_date, :tag_list, :photo, :remove_photo, :photo_caption, :featured)
     end
 end

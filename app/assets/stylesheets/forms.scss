@@ -1,0 +1,14 @@
+.field {
+  border-bottom: 1px dotted $medium_gray;
+}
+
+form {
+ .thumb {
+  display: block;
+  float: none;
+  margin: 1em auto;
+}
+select {
+  display: inline-block;
+}
+}

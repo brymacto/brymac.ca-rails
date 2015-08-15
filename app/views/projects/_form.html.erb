@@ -17,7 +17,7 @@
 
 <div class="field">
   <%= f.label :description %><br>
-  <%= f.text_area :description %>
+  <%= f.text_area :description, rows: 20 %>
 </div>
 
 <div class="field">
@@ -49,18 +49,21 @@
   <%= f.text_field :photo_caption %>
 </div>
 
-<p>
-  <label>
-    <%= f.check_box :remove_photo %>
-    Remove photo
-  </label>
-</p>
+<div class="field">
+  <%= f.label :remove_photo %><br>
+  <%= f.check_box :remove_photo %>
+</div>
 
-<p>
+<div class="field">
+  <%= f.label :featured %><br>
+  <%= f.check_box :featured %>
+</div>
+
+<div class="field">
  <%= f.label 'Public date' %><br>
  <%= date_select :project, :public_date %>
-</p>
-<p>
+</div>
+<div>
   <%= f.submit %>
-</p>
+</div>
 <% end %>

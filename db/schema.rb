@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812014337) do
+ActiveRecord::Schema.define(version: 20150815195744) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150812014337) do
     t.string   "photo"
     t.string   "photo_caption"
     t.string   "slug"
+    t.boolean  "featured"
   end
 
   create_table "taggings", force: :cascade do |t|
