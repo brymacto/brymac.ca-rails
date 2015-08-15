@@ -6,16 +6,17 @@
 
     <div class="postDetail-meta post-meta project-meta">
       <span class="postDetail-date post-date"><%= @project.date %></span>
+            <div class="tag_list">
+        <% @project.tag_list.each do |tag| %>
+        <%= link_to tag, ('/tags/' + tag.downcase), class: :badge  %>
+        <% end %>
+      </div>
     </div> 
     <div class="project_links">
       <a href="" class="project_link"><i class="fa fa-github"></i> Repo</a>
       <a href="" class="project_link"><i class="fa fa-external-link"></i> Live</a>
     </div>  
-      <div class="tag_list">
-        <% @project.tag_list.each do |tag| %>
-        <%= link_to tag, ('/tags/' + tag.downcase), class: :badge  %>
-        <% end %>
-      </div>
+
   
   <% if @project.photo.url %>
   <%= image_tag(@project.photo.full, class: 'full') %>

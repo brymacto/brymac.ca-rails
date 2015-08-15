@@ -2,13 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .project {
-  .tag_list {
-    clear: both;
-    float: none;
-    display: block;
-    font-size: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
+  // .tag_list {
+  //   clear: both;
+  //   float: none;
+  //   display: block;
+  //   font-size: 0.75rem;
+  //   margin-bottom: 0.75rem;
+  // }
 }
 .project_links {
   display: block;
@@ -27,20 +27,3 @@
 
 }
 
-
-
-@media screen and (min-width: $medium-screen) {
-  .project-meta {
-    float: left;
-  }
-.project_links {
-  float: right;
-  margin-bottom: 0em;
-  padding: 0em;
-}
-
-}
-@media screen and (min-width: $small-screen) {
-
-
-}
