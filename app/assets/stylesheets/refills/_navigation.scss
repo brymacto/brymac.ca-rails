@@ -61,12 +61,12 @@ header.navigation {
   // Mobile view
 
   .navigation-menu-button {
-    
 
-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2);
 
-    border: 1px solid $navigation-color;
-    color: $navigation-color;
+    // box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2);
+
+    border: 1px solid $c_red;
+    color: $c_red;
     display: block;
     float: left;
     font-weight: 700;
@@ -102,7 +102,7 @@ box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2);
 
     &:focus,
     &:hover {
-      color: $navigation-color-hover;
+      color: $c_blue_2;
     }
   }
 
