@@ -11,21 +11,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
   <div class="wrapper">
-
     <header>
       <%= image_tag("portrait.jpg", alt: "Bryan MacDiarmid portrait", class: "portrait") %>
       <h1 class="logo">Bryan MacDiarmid</h1>
       <%= render 'refills/navigation' %>
-
     </header>
-
     <div class="main">
       <%= yield %>
     </div>
-<%= render 'static_pages/aside' %>
+    <%= render 'static_pages/aside' %>
+  <footer>
+    &copy; 2015 Bryan MacDiarmid
+  </footer>
   </div>
-
 </body>
 </html>
