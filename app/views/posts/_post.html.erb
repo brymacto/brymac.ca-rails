@@ -3,7 +3,7 @@
     <%= link_to post.title, post  %></h3>
     <div class="postCard-meta post-meta">
       <span class="postCard-date post-date"><%= post.date %></span>
-      <%= render 'shared/tags', taggable: post %>
+      <%= render 'shared/tags', taggable: post, short_list: true %>
     </div> 
 
       <% if post.photo.url %>
