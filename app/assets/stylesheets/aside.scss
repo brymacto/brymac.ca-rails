@@ -36,6 +36,13 @@ aside {
     }
   }
 
+  @media screen and (min-width: $medium-screen) and (max-width: em(900)) {
+  // @media screen and (max-width: em(900)), screen and (min-width: $medium-screen) {
+    .email_domain {
+      display: none;
+    }
+  }
+
 }
 
 

@@ -8,8 +8,9 @@ body {
   padding: 1rem;
   @include outer-container;
   header { @include span-columns(12);}
+  footer { @include span-columns(12);}
   .main { @include span-columns(12); position: relative;}
-  .aside { @include span-columns(12); }
+  .aside { @include span-columns(12); } 
   .featured_projects_wrapper {
     // @include span-columns(12 of 12);
     .featured_project {
@@ -18,13 +19,14 @@ body {
 }
 
 footer {
-  text-align: right;
   font-size: 0.75rem;
   color: $medium-gray;
   border-top: 1px dotted $light_gray;
   padding-top: 1em;
   margin-top: 1em;
+  margin-bottom: 1em;
   clear: both;
+  bottom: 0px;
 }
 
 
@@ -100,7 +102,7 @@ h2 {
   .wrapper {
     header { @include span-columns(12);}
     .main { @include span-columns(9); }
-    .aside { @include span-columns(3); } 
+    .aside { @include span-columns(3); @include omega } 
   }
   h1.logo {
     font-size: 4rem;
