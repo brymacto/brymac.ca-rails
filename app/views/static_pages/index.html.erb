@@ -3,7 +3,7 @@
 <h2><%= link_to 'Blog: latest post', posts_path  %></h2>
 <div class="blogPreview">
   <% @posts.each do |post| %>
-  <%= render post %>
+  <%= render post if post != nil %>
   <% end %>
 </div>
 
@@ -13,7 +13,7 @@
 
   <% @projects.each do |project| %>
   <div class="featured_project">
-  <%= render project %>
+  <%= render project if project != nil %>
   </div>
   <% end %>
   
