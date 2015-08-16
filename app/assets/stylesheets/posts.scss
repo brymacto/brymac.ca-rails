@@ -48,9 +48,6 @@
 .thumb_clear {
   clear:both;
 }
-.full {
-  width: 100%;
-}
 
 .tag_list {
   display: block;
@@ -71,6 +68,12 @@
 .tag_list {
   display: inline;
   line-height: 1.75;
+}
+
+figure.small {
+float: right;
+max-width: 40%;
+
 }
 }
 @media screen and (min-width: $small-screen) {

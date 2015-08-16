@@ -5,10 +5,10 @@
       <span class="postDetail-date post-date"><%= @post.date %></span>
       <%= render 'shared/tags', taggable: @post %>
     </div> 
-      <% if @post.photo.url %>
-        <%= image_tag(@post.photo.full, class: 'full') %>
-        <div class="caption"><%= @post.photo_caption %></div>
-      <% end %>
+    <% if @post.photo.url %>
+    <%= render 'shared/photo', photo: @post.photo.full, size: @post.photo_size %>
+    <% end %>
+
     <p class="postDetail-contents">
       <%= @post.contents.html_safe %> 
     </p>

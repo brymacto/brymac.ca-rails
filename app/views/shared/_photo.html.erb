@@ -1,0 +1,8 @@
+<% size = 'full' if !(['full', 'small', 'none'].include? size) %>
+<% if size != 'none' %>
+<figure class='<%= size %>'>
+  <%= image_tag(photo, class: size) %>
+  <figcaption><%= @post.photo_caption %></figcaption>
+</figure>
+
+<% end %>

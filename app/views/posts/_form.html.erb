@@ -39,18 +39,21 @@
   <%= f.text_field :photo_caption %>
 </div>
 
-<p>
-  <label>
-    <%= f.check_box :remove_photo %>
-    Remove photo
-  </label>
-</p>
+<div class="field">
+  <%= f.label :photo_size %><br>
+  <%= f.select(:photo_size, options_for_select([['full', 'full'], ['small', 'small'], ['none', 'none']], 'full')) %>
+</div>
 
-<p>
+<div class="field">
+  <%= f.label :remove_photo %><br>
+  <%= f.check_box :remove_photo %>
+</div>
+
+<div class="field">
  <%= f.label 'Public date' %><br>
  <%= date_select :post, :public_date %>
-</p>
-<p>
+</div>
+<div>
   <%= f.submit %>
-</p>
+</div>
 <% end %>
