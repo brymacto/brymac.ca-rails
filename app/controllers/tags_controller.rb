@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+  skip_before_filter :require_login, only: [:show]
   def show
     tags = params[:tags]
     @pluralized = ''
