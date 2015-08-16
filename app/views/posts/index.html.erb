@@ -1,11 +1,10 @@
-<h1>Blog</h1>
-
 <% if current_user %>
 <div class="admin_section">
 <%= link_to 'New post', new_post_path %>
 </div>
 <% end %>
 
+<h1><%= title 'Blog' %></h1>
 
 <% @posts.each do |post| %>
 <%= render post %>

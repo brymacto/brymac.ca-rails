@@ -1,4 +1,6 @@
-<h1>Tag<%= @pluralized %>: <%= @tag_name %></h1>
+<h1>
+  <%= title ("Tag#{@pluralized}: #{@tag_name}") %>
+</h1>
 
 <ul class="accordion-tabs data-no-turbolink">
   <li class="tab-header-and-content">
@@ -15,13 +17,13 @@
  <li class="tab-header-and-content">
   <a href="javascript:void(0)" class="tab-link">Projects</a>
   <div class="tab-content">
-     <% if @projects.length == 0 %>
-     Sorry, I haven't tagged any projects with '<%= @tag_name %>' yet. Check out my <%= link_to 'projects', projects_path %> to see what else I've worked on.   
-     <% end %>
-     <% @projects.each do |project| %>
-     <%= render project %>
-     <% end %>
-  </div>
+   <% if @projects.length == 0 %>
+   Sorry, I haven't tagged any projects with '<%= @tag_name %>' yet. Check out my <%= link_to 'projects', projects_path %> to see what else I've worked on.   
+   <% end %>
+   <% @projects.each do |project| %>
+   <%= render project %>
+   <% end %>
+ </div>
 </li>
 </ul>
 

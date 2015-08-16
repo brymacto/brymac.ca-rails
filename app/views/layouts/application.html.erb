@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bryan MacDiarmid | Web Developer</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'> -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400|Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <%= csrf_meta_tags %>
+  <link rel="icon" href="http://s3.amazonaws.com/brymac/assets/favicon.png">
+  <meta property="og:image" content="http://s3.amazonaws.com/brymac/assets/fb-og.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= display_meta_tags :site => 'Bryan MacDiarmid, Web Developer' %>
 </head>
 <body>
   <div class="wrapper">

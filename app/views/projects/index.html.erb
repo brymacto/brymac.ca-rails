@@ -1,9 +1,10 @@
-<h1>Projects</h1>
 <% if current_user %>
 <div class="admin_section">
   <%= link_to 'New Project', new_project_path %>
 </div>
 <% end %>
+<h1><%= title 'Projects' %></h1>
+
 <% if @projects && @projects.count > 0 %>
   
 <% @projects.each do |project| %>
