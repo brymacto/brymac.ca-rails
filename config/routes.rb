@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_sessions
   resources :users
   get 'tags/show'
   get 'tags', to: 'tags#show'
@@ -20,9 +21,6 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   resources :user_sessions
-  get 'user_sessions/new'
-  get 'user_sessions/create'
-  get 'user_sessions/destroy'
   get 'bm' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 

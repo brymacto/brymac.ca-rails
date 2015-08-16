@@ -18,12 +18,20 @@
       <%= render 'refills/navigation' %>
     </header>
     <div class="main">
+      <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "flash-#{key}" %>
+      <% end %>
       <%= yield %>
 
     </div>
     <%= render 'static_pages/aside' %>
     <footer>
       Check out my <a href="https://github.com/brymacto/brymac.ca-rails" target="_blank">github repo</a> for this website &middot; &copy; 2015 Bryan MacDiarmid
+
+
+      <% if current_user %>
+      <%= link_to "Logout", :logout, method: :post %>
+      <% end %>
     </footer>
 
   </div>
