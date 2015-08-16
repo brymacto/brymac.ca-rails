@@ -1,5 +1,9 @@
-<%= link_to 'Edit', edit_project_path(@project) %> 
-<%= link_to 'All projects', projects_path %>
+<% if current_user %>
+<div class="admin_section">
+  <%= link_to 'Edit', edit_project_path(@project) %> 
+</div>
+<% end %>
+
 
 
 <%= render 'detail' %>
