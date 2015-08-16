@@ -9,11 +9,8 @@
     <%= render 'shared/tags', taggable: @project %>
   </div> 
   <%= render 'links', project: @project %>
-
-  
   <% if @project.photo.url %>
-  <%= image_tag(@project.photo.full, class: 'full') %>
-  <div class="caption"><%= @project.photo_caption %></div>
+  <%= render 'shared/photo', photo: @project.photo.full, size: @project.photo_size, caption: @project.photo_caption %>
   <% end %>
   <p class="postDetail-contents">
     <%= @project.description.html_safe %> 

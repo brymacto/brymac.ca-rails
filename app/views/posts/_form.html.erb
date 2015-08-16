@@ -41,7 +41,7 @@
 
 <div class="field">
   <%= f.label :photo_size %><br>
-  <%= f.select(:photo_size, options_for_select([['full', 'full'], ['small', 'small'], ['none', 'none']], 'full')) %>
+  <%= f.select(:photo_size, options_for_select([['full', 'full'], ['small', 'small'], ['none', 'none']], (@post.photo_size || 'full'))) %>
 </div>
 
 <div class="field">
