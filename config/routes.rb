@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get 'projects/index'
 
+  get 'static_pages/about'
+  get 'about' => 'static_pages#about'
   get 'static_pages/index'
   root 'static_pages#index'
 

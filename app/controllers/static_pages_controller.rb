@@ -1,5 +1,9 @@
 class StaticPagesController < ApplicationController
   skip_before_filter :require_login
+  def about
+
+  end
+
   def index
     @page_description = "I'm a Toronto-based web developer, with a focus on Ruby, Rails, and JavaScript. In August, 2015, I completed the Bitmaker Labs web development program."
 
