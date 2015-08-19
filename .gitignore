@@ -17,5 +17,9 @@
 /tmp
 .env
 
+/public/uploads/post/*
+/public/uploads/project/*
+/public/uploads/tmp/*
+
 # Ignore application configuration
 /config/application.yml
