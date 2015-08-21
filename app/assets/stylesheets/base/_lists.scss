@@ -29,3 +29,15 @@ dl {
     margin: 0;
   }
 }
+
+.bulleted {
+    list-style-type: disc;
+    margin-bottom: $small-spacing;
+    padding-left: $base-spacing;
+}
+
+.numbered {
+  list-style-type: decimal;
+  margin-bottom: $small-spacing;
+  padding-left: $base-spacing;
+}
