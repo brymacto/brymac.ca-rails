@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  belongs_to :project
   mount_uploader :photo, PhotoUploader
   validates :title, :contents, presence: true
   acts_as_taggable
