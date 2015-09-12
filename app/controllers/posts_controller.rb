@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
   skip_before_filter :require_login, only: [:index, :show]
   def index
-    @posts = Post.all.order(public_date: :desc)
+    if current_user
+      @posts = Post.all.order(public_date: :desc)
+    else
+      @posts = Post.where('public_date <= ?', Time.now).order(public_date: :desc)
+    end
   end
   def edit
     @post = Post.friendly.find(params[:id])
