@@ -41,7 +41,11 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all.order(public_date: :desc)
+    featured_projects = Project.where("featured = ?", true).order(title: :asc, public_date: :desc)
+    other_projects = Project.where.not("featured = ?", true).order(title: :asc, public_date: :desc)
+    @projects = []
+    @projects << featured_projects
+    @projects << other_projects
   end
 
   private

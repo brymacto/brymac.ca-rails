@@ -1,13 +1,13 @@
 <p>I'm a Toronto-based web developer, with a focus on Ruby, Rails, and JavaScript.  In August, 2015, I completed the <a href="https://bitmakerlabs.com/" target="_blank">Bitmaker Labs</a> web development program.</p>
 
-<h2><%= link_to 'Blog: latest post', posts_path  %></h2>
+<h2><%= link_to 'Blog: latest post <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>'.html_safe, posts_path  %></h2>
 <div class="blogPreview">
   <% @posts.each do |post| %>
   <%= render post %>
   <% end %>
 </div>
 
-<h2>Featured Projects</h2>
+<h2><%= link_to 'Featured projects <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>'.html_safe, projects_path  %></h2>
 
 <div class="featured_projects_wrapper">
 
