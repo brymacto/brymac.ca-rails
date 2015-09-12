@@ -7,7 +7,7 @@ class StaticPagesController < ApplicationController
   def index
     @page_description = "I'm a Toronto-based web developer, with a focus on Ruby, Rails, and JavaScript. In August, 2015, I completed the Bitmaker Labs web development program."
 
-
+    @posts = Post.all.order(public_date: :desc).limit(1)
     featured_projects = Project.where("featured = ?", true).order(title: :asc, public_date: :desc).limit(3)
     other_projects = Project.where.not("featured = ?", true).order(title: :asc, public_date: :desc).limit(3)
     @projects = []
