@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.friendly.find(params[:id])
+    @posts = @project.posts
   end
 
   def update

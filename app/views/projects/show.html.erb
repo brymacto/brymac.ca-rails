@@ -7,3 +7,10 @@
 
 
 <%= render 'detail' %>
+
+<% if @posts.count > 0 %>
+<h2>Blog posts related to <%= @project.title %></h2>
+<% @posts.each do |post| %>
+  <%= render post if post != nil %>
+  <% end %>
+<% end %>
