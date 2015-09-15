@@ -2,6 +2,7 @@
   <h3 class="postCard-header post-header">
     <%= link_to project.title, project  %></h3>
     <div class="postCard-meta post-meta">
+      <span class="postCard-date post-date"><%= project.date %></span>
       <%= render 'shared/tags', taggable: project, short_list: true %>
     </div> 
       <%= render 'projects/links', project: project  %>
