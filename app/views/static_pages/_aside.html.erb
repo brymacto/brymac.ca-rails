@@ -1,27 +1,15 @@
     <aside class="aside">
-
       <h3>Skills</h3>
       <section>
-        <div class="skill">
-          <%= link_to 'Rails', tag_path(:rails)  %>
-          <%= skills_bullets(3) %>
-        </div>
-        <div class="skill">
-          <%= link_to 'Ruby', tag_path(:ruby)  %>
-          <%= skills_bullets(3) %>
-        </div>
-        <div class="skill">
-          <%= link_to 'JavaScript', tag_path(:javascript)  %>
-          <%= skills_bullets(2.5) %>
-        </div>
-        <div class="skill">
-          <%= link_to 'HTML & CSS', tag_path(:multiple, tags: ['html', 'css'])  %>
-          <%= skills_bullets(3.5) %>
-        </div>
+        <%= link_to :Rails, tag_path(:rails), class: :badge  %>
+        <%= link_to :Ruby, tag_path(:ruby), class: :badge  %>
+        <%= link_to :JavaScript, tag_path(:javascript), class: :badge  %>
+        <%= link_to 'HTML & CSS', tag_path(:multiple, tags: [:html, :css]), class: :badge  %>
+        <%= link_to :TDD, tag_path(:tdd), class: :badge  %>
+        <%= link_to :Agile, tag_path(:agile), class: :badge  %>
       </section>
       <h3>Connect with me</h3>
       <section>
-
         <ul class="contact_methods">
           <li><a href="mailto:brymac@gmail.com"><i class="fa fa-envelope-o"></i>brymac<span class="email_domain">@gmail.com</span></a></li>
           <li><a href="http://twitter.com/bmacdia" target="_blank" class="contact_method"><i class="fa fa-twitter"></i>@bmacdia</a></li>
@@ -30,7 +18,4 @@
           <li><a href="https://instagram.com/bmacdiarmid/" target="_blank" class="contact_method"><i class="fa fa-instagram"></i>bmacdiarmid</a></li>
         </ul>
       </section>
-
-
-
     </aside>
