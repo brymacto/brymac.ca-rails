@@ -32,6 +32,7 @@ end
 
 group :development, :test do
   gem 'rubocop'
+  gem 'rails-footnotes', '~> 4.0'
   gem 'byebug' # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'faker'
   gem 'web-console', '~> 2.0' # Access an IRB console on exception pages or by using <%= console %> in views

@@ -24,6 +24,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.friendly.find(params[:id])
     @posts = @project.posts
+    @photo_copyright = {url: @project.photo_copyright_url, name: @project.photo_copyright_name}
   end
 
   def update
@@ -52,6 +53,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :code_url, :live_url, :public_date, :tag_list, :photo, :remove_photo, :photo_caption, :featured, :photo_size)
+    params.require(:project).permit(:title, :description, :code_url, :live_url, :public_date, :tag_list, :photo, :remove_photo, :photo_caption, :featured, :photo_size, :photo_copyright_name, :photo_copyright_url)
   end
 end

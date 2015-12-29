@@ -7,12 +7,18 @@
   <div class="postDetail-meta post-meta project-meta">
     <span class="postDetail-date post-date"><%= @project.date %></span>
     <%= render 'shared/tags', taggable: @project %>
-  </div> 
+  </div>
   <%= render 'links', project: @project %>
   <% if @project.photo.url %>
-  <%= render 'shared/photo', photo: @project.photo.full, size: @project.photo_size, caption: @project.photo_caption %>
+      <%= render 'shared/photo', photo: @project.photo.full, size: @project.photo_size, caption: @project.photo_caption %>
   <% end %>
   <p class="postDetail-contents">
-    <%= @project.description.html_safe %> 
+    <%= @project.description.html_safe %>
+    <% if @photo_copyright[:name].size > 0 %>
+      <hr>
+      <small>Creative Commons photo by
+        <a href="<%= @photo_copyright[:url] %>" target="_blank"><%= @photo_copyright[:name] %>
+        </a></small>
+  <% end %>
   </p>
 </article>

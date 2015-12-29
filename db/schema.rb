@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229023146) do
+ActiveRecord::Schema.define(version: 20151229024236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,13 +53,15 @@ ActiveRecord::Schema.define(version: 20151229023146) do
     t.string   "code_url"
     t.string   "live_url"
     t.date     "public_date"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "photo"
     t.string   "photo_caption"
     t.string   "slug"
     t.boolean  "featured"
     t.string   "photo_size"
+    t.string   "photo_copyright_name"
+    t.string   "photo_copyright_url"
   end
 
   create_table "taggings", force: :cascade do |t|
