@@ -1,16 +1,23 @@
 <article class="post postDetail">
   <h1 class="postDetail-header post-header">
     <%= title @post.title %>
-    </h1>
-    <div class="postDetail-meta post-meta">
-      <span class="postDetail-date post-date"><%= @post.date %></span>
-      <%= render 'shared/tags', taggable: @post %>
-    </div> 
-    <% if @post.photo.url %>
-    <%= render 'shared/photo', photo: @post.photo.full, size: @post.photo_size, caption: @post.photo_caption %>
-    <% end %>
+  </h1>
 
-    <p class="postDetail-contents">
-      <%= @post.contents.html_safe %> 
-    </p>
-  </article>
+  <div class="postDetail-meta post-meta">
+    <span class="postDetail-date post-date"><%= @post.date %></span>
+    <%= render 'shared/tags', taggable: @post %>
+  </div>
+  <% if @post.photo.url %>
+      <%= render 'shared/photo', photo: @post.photo.full, size: @post.photo_size, caption: @post.photo_caption %>
+  <% end %>
+
+  <div class="postDetail-contents">
+    <%= @post.contents.html_safe %>
+    <% if @photo_copyright[:name] %>
+        <hr>
+        <small>Creative Commons photo by
+          <a href="<%= @photo_copyright[:url] %>" target="_blank"><%= @photo_copyright[:name] %>
+          </a></small>
+    <% end %>
+  </div>
+</article>

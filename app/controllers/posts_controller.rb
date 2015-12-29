@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.friendly.find(params[:id])
+    @photo_copyright = {url: @post.photo_copyright_url, name: @post.photo_copyright_name}
   end
 
   def create
@@ -52,6 +53,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :contents, :public_date, :tag_list, :photo, :remove_photo, :photo_caption, :photo_size, :project_id)
+    params.require(:post).permit(:title, :contents, :public_date, :tag_list, :photo, :remove_photo, :photo_caption, :photo_size, :project_id, :photo_copyright_name, :photo_copyright_url)
   end
 end
