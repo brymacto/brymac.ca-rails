@@ -13,7 +13,7 @@
 
   <div class="postDetail-contents">
     <%= @post.contents.html_safe %>
-    <% if @photo_copyright[:name].size > 0 %>
+    <% if @photo_copyright[:name] && @photo_copyright[:name].size > 0 %>
         <hr>
         <small>Creative Commons photo by
           <a href="<%= @photo_copyright[:url] %>" target="_blank"><%= @photo_copyright[:name] %>
