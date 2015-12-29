@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  def date
+  def date 
     public_date.strftime('%B %e, %Y')
   end
 end

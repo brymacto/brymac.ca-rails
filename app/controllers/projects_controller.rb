@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      if @project.public_date.nil?
+      if (@project.public_date == nil)
         @project.public_date = @project.created_at.to_date
         @project.save
       end
@@ -43,8 +43,8 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    featured_projects = Project.where('featured = ?', true).order(public_date: :desc)
-    other_projects = Project.where.not('featured = ?', true).order(public_date: :desc)
+    featured_projects = Project.where("featured = ?", true).order(public_date: :desc)
+    other_projects = Project.where.not("featured = ?", true).order(public_date: :desc)
     @projects = []
     @projects << featured_projects
     @projects << other_projects
