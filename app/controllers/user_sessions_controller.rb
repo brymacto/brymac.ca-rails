@@ -1,7 +1,7 @@
 class UserSessionsController < ApplicationController
   skip_before_filter :require_login, only: [:create, :new]
   def new
-    set_meta_tags :noindex => true
+    set_meta_tags noindex: true
     @user = User.new
   end
 

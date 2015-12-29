@@ -20,6 +20,5 @@ module SkillsHelper
     final_html << '</span>'
 
     final_html.html_safe
-
   end
 end
